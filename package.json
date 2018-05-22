@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server/server.js",
+    "dev": "nodemon src/server/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
     "express": "^4.16.3",
     "node-sass-css-importer": "0.0.3",
     "nodemon": "^1.17.4",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "request": "^2.87.0"
   }
 }

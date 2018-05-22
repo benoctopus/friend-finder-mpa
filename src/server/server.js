@@ -1,9 +1,8 @@
 const express = require('express');
 const path = require('path');
 const parser = require('body-parser');
-const htmlRoutes = require('./htmlRoutes');
-const apiRoutes = require('./apiRoutes');
-const friends = require('./friends');
+const htmlRoutes = require('./routes/htmlRoutes');
+const apiRoutes = require('./routes/apiRoutes');
 const app = express();
 
 
@@ -15,7 +14,7 @@ app.set('views', path.join(__dirname, '../client/views'));
 app.use(parser.urlencoded({extended: true}));
 app.use(parser.json());
 
-app.use(express.static('public'));
+app.use(express.static('src/client/public'));
 
 app.use(apiRoutes);
 app.use(htmlRoutes);

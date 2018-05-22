@@ -1,10 +1,10 @@
 const routes = require('express').Router();
-const friends = require('./friends');
-const determineCompatibility = require('./compatibility');
-const userData = friends.dummyGen();
+const friends = require('../data/friends');
+const determineCompatibility = require('../data/compatibility');
+friend = require('../data/friends');
 const defaultPic = 'https://www.professionalclick.com/images/default.jpg';
 
-routes.get('/api/friends', (req, res) => res.json(userData));
+routes.get('/api/friends', (req, res) => res.json(friends.get()));
 
 routes.post('/api/newfriend', (req, res) => {
   let user = req.body;
@@ -13,7 +13,7 @@ routes.post('/api/newfriend', (req, res) => {
     user.photo = defaultPic
   }
   console.log(user);
-  let newFriend = determineCompatibility(user, userData);
+  let newFriend = determineCompatibility(user, friends.get());
   res.render(
     'friendCard',
     {
@@ -24,7 +24,8 @@ routes.post('/api/newfriend', (req, res) => {
       compatibility: newFriend.compatibility
     }
   );
-  userData.push(user);
+  friends.push(user);
 });
+
 
 module.exports = routes;

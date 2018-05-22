@@ -26,6 +26,11 @@ function listeners() {
   function surveyForm() {
     survey.on('submit', e => {
       e.preventDefault();
+
+      if (window.lock) {
+        return
+      }
+
       let results = [];
 
       for (let i = 1; i <= 10; i++) {
@@ -37,7 +42,7 @@ function listeners() {
         results.push(input)
       }
       postResults(results);
-      survey.off('submit')
+      window.lock = true;
     })
   }
 }
