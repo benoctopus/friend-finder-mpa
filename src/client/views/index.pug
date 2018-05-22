@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  section
+    form#sign-in
+      p Fill out the form to find your friends!
+      label(for='user-name') Name
+      input#user-name(type='text' name='userName' required)
+      label(for='photo-url') Photo Url
+      input#photo-url(type='text' name='photoUrl' required)
+      input.submit(type='submit' value='Go to survey')
+
