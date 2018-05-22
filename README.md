@@ -8,7 +8,7 @@ This app is a conversion of my friend-finder-react project in mpa format with re
 
 ## TL;DR
 
-See the heroku link above for a fully function deployed version of this app. In order to run from source code, install npm dependencies and run `npm start` or `npm dev`(for nodemon) in the project's base directory.
+See the heroku link above for a fully function deployed version of this app. In order to run from source code, install npm dependencies and run `npm start` or `npm dev`(for nodemon) in the project's base directory. App is mobile responsive.
 
 ## instructions 
 
