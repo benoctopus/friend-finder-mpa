@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, '../client/views'));
 app.use(parser.urlencoded({extended: true}));
 app.use(parser.json());
 
-app.use(express.static('src/client/public'));
+app.use(express.static('app/client/public'));
 
 app.use(apiRoutes);
 app.use(htmlRoutes);
