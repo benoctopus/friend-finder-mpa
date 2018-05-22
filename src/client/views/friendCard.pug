@@ -1,12 +1,12 @@
-- var className = 'friend-card';
+- var className = 'friend-card friend-card-static';
 - if (friends) {className = 'friend-card-static';}
 div(class=className)
-  img(src=photo, alt=alt)
+  img(src=photo, alt='photo not found')
   .friend-info
     p #{name}
     if compatibility
       p #{compatibility}% compatibility!
-      a#friends-link(href='#') View all friends!
+      a#friends-link(href='/allfriends') View all friends!
     else
       ul
         each val, i in scores
