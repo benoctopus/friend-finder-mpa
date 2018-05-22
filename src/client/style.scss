@@ -1,7 +1,129 @@
 @import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+
+@keyframes fadein {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+section, .friend-card {
+  -webkit-animation: fadein 400ms;
+  -moz-animation: fadein 400ms;
+  -o-animation: fadein 400ms;
+  animation: fadein 400ms;
+}
 
 body {
+  background: whitesmoke;
+}
+
+html {
+  font-family: 'aleway', sans-serif;
+  font-size: 10px;
+}
+
+header {
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  margin: 0;
+
+  background: #FC466B; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #3F5EFB, #FC466B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  border-bottom: solid gray .1rem;
+  font-size: inherit;
+  overflow: hidden;
+}
+
+#page-title {
+  font-size: 3.5rem;
+  font-family: 'Roboto', sans-serif;
+  padding: .5rem;
+  text-align: center;
+}
+
+#sign-in {
+  margin: 2rem auto;
+  display: flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  flex-flow: column nowrap;
+  width: fit-content;
+  padding: 1rem;
+  border: solid gray 1px;
+}
+
+#sign-in > * {
+  margin: .3rem 0;
+  padding: .3rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#sign-in > input {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  border: solid 1px gray;
 
 }
 
+input:focus {
+  outline: none;
+}
 
+.submit {
+  margin: .7rem auto !important;
+  width: 8rem;
+  -webkit-transition: background-color 400ms;
+  -moz-transition: background-color 400ms;
+  -ms-transition: background-color 400ms;
+  -o-transition: background-color 400ms;
+  transition: background-color 400ms;
+}
+
+.submit:hover {
+  cursor: pointer;
+  background-color: #B73EA2
+}
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+
+  .header-text {
+    padding-left: 2.5rem;
+  }
+
+}
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+
+  html {
+    font-size: 25px;
+  }
+
+}

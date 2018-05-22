@@ -36,7 +36,8 @@ function listeners() {
         }
         results.push(input)
       }
-      postResults(results)
+      postResults(results);
+      survey.off('submit')
     })
   }
 }
@@ -48,7 +49,9 @@ function postResults(scores) {
         name: localStorage.name,
         photo: localStorage.photoUrl,
         scores
-      }, res => console.log(res))
+      }, res => (
+        $('body').append($(res))
+      ))
   }
   else {
     alert('Please provide a name and re-complete the survey');

@@ -1,8 +1,8 @@
 const questions = require('./questions');
-module.exports = function (app) {
+const routes = require('express').Router();
 
-  app.get('/survey', (req, res) => res.render('survey', {questions}));
+routes.get('/survey', (req, res) => res.render('survey', {questions}));
 
-  app.get('*', (req, res) => res.render('index'));
-};
+routes.get('*', (req, res) => res.render('index'));
 
+module.exports = routes;

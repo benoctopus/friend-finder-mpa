@@ -1,0 +1,11 @@
+.friend-card.hidden
+  img(src=photo, alt=alt)
+  .friend-info
+    p #{name}
+    if compatibility
+      p #{compatibility}% compatibility!
+      a#friends-link(href='#') View all friends!
+    else
+      ul
+        each val, i in scores
+          li Q#{i + 1}: #{val}
