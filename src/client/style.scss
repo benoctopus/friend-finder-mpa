@@ -10,7 +10,7 @@
   to {opacity: 1}
 }
 
-section, .friend-card {
+section, .friend-card-static, .friend-card{
   -webkit-animation: fadein 400ms;
   -moz-animation: fadein 400ms;
   -o-animation: fadein 400ms;
@@ -131,20 +131,25 @@ input:focus {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: fit-content !important;
+}
+
+.friend-card-static {
+  margin: 1rem auto;
   display: flex;
   flex-flow: row nowrap;
   border: solid 1px gray;
-  width: fit-content;
+  width: 70%;
   padding: .8rem;
 
   background: white;
 }
 
-.friend-card > * {
+.friend-card-static > * {
   //padding: .5rem
 }
 
-.friend-card > img {
+.friend-card-static> img {
   $idim: 15rem;
   border-radius: 100%;
   max-width: $idim;
@@ -155,28 +160,28 @@ input:focus {
   padding: 0 !important;
 
 }
-.friend-card p {
+.friend-card-static p {
   font-size: 2rem;
 }
 
-.friend-card > div {
+.friend-card-static > div {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   text-align: center;
 }
-.friend-card > div > * {
+.friend-card-static > div > * {
   padding: 0 .5rem 0 .5rem;
 }
 
-.friend-card li {
+.friend-card-static li {
   width: max-content;
   display: flex;
   position: relative;
   flex-flow: row nowrap;
 }
 
-.friend-card li:last-child {
+.friend-card-static li:last-child {
   justify-items: flex-end;
 
 }

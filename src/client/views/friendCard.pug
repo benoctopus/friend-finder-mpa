@@ -1,4 +1,6 @@
-.friend-card.hidden
+- var className = 'friend-card';
+- if (friends) {className = 'friend-card-static';}
+div(class=className)
   img(src=photo, alt=alt)
   .friend-info
     p #{name}
@@ -8,4 +10,4 @@
     else
       ul
         each val, i in scores
-          li Q#{i + 1}: #{val}
+          li Question#{i + 1}: #{val}

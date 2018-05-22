@@ -54,7 +54,7 @@ table {
     opacity: 0; }
   to {
     opacity: 1; } }
-section, .friend-card-static, .friend-card {
+section, .friend-card-static, friend-card {
   -webkit-animation: fadein 400ms;
   -moz-animation: fadein 400ms;
   -o-animation: fadein 400ms;
@@ -157,19 +157,18 @@ input:focus {
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: fit-content !important; }
+  transform: translate(-50%, -50%); }
 
-.friend-card-static {
+.friend-card-static, friend-card {
   margin: 1rem auto;
   display: flex;
   flex-flow: row nowrap;
   border: solid 1px gray;
-  width: 70%;
+  width: fit-content;
   padding: .8rem;
   background: white; }
 
-.friend-card-static > img {
+.friend-card-static, friend-card > img {
   border-radius: 100%;
   max-width: 15rem;
   max-height: 15rem;
@@ -178,25 +177,25 @@ input:focus {
   margin-right: 3rem;
   padding: 0 !important; }
 
-.friend-card-static p {
+.friend-card-static, friend-card p {
   font-size: 2rem; }
 
-.friend-card-static > div {
+.friend-card-static, friend-card > div {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   text-align: center; }
 
-.friend-card-static > div > * {
+.friend-card-static, friend-card > div > * {
   padding: 0 .5rem 0 .5rem; }
 
-.friend-card-static li {
+.friend-card-static, friend-card li {
   width: max-content;
   display: flex;
   position: relative;
   flex-flow: row nowrap; }
 
-.friend-card-static li:last-child {
+.friend-card-static, friend-card li:last-child {
   justify-items: flex-end; }
 
 #survey {

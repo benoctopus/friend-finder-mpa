@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  each friend in friends
+    - var name = friend.name, photo = friend.photo, scores = friend.scores
+    include friendCard
